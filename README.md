@@ -17,10 +17,12 @@ To get a token, you must first register as a user:
 >		{
 >			"error": null,
 >			"data": {
->				"_id": "fiodjsf01903uj",
->				"todos": []
->			},
->			"token": "32910i392.9903i092i193i902i193i.3i201i039i12"
+>				"user": {
+>					"_id": "fiodjsf01903uj",
+>					"todos": []
+>				},
+>				"token": "32910i392.9903i092i193i902i193i.3i201i039i12"
+>			}
 >		}
 
 ## Login
@@ -36,10 +38,12 @@ The login call is to be used to get the auth token.
 >		{
 >			"error": null,
 >			"data": {
->				"_id": "fiodjsf01903uj"-,
->				"todos": []
->			},
->			"token": "32910i392.9903i092i193i902i193i.3i201i039i12"
+>				"user": {
+>					"_id": "fiodjsf01903uj",
+>					"todos": []
+>				},
+>				"token": "32910i392.9903i092i193i902i193i.3i201i039i12"
+>			}
 >		}
 
 ## Getting Todos
