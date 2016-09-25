@@ -236,7 +236,17 @@ function isAuthenticated(req, res, next) {
 		return res.status(401).json(unauthorizedError);
 	}
 	var token = components[1].trim();
-	var userID = jwt.decode(token, secret).userID;
+	var decoded
+	try {
+		decoded = jwt.decode(token, secret);
+	}
+	catch(err) {
+		return res.status(401).json(unauthorizedError);
+	}
+	if (!decoded) {
+		return res.status(401).json(unauthorizedError);
+	}
+	var userID = decoded.userID;
 	if (!userID) {
 		return res.status(401).json(unauthorizedError);
 	}
