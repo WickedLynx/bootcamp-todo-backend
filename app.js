@@ -186,7 +186,7 @@ app.post("/register", function(req, res) {
 				var userObject = user.toObject();
 				delete userObject.hash;
 				delete userObject.salt;
-				res.json({
+				res.status(200).json({
 					error: null,
 					data: {
 						token: token,
@@ -205,7 +205,7 @@ app.post('/login', passport.authenticate('local', { session: false }), function(
 	var userObject = req.user.toObject();
 	delete userObject.hash;
 	delete userObject.salt;
-	res.json({
+	res.status(200).json({
 		error: null,
 		data: {
 			token: token,
